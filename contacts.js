@@ -75,15 +75,20 @@ document.querySelector('.mensageiros').innerHTML = contactsMessage.join("");
 let appMaps = contactsObj.map(function(contact){
     if(contact.socialNetwork === 'Maps') {
         return `
-                <a href="${contact.href}" class="${contact.aClass}" id="${contact.id}">
-                    <i class="${contact.iClass}" alt="${contact.alt}"></i>
-                </a>
-                <address>
-                    <p>${contact.endereco}</p>
-                    <p>${contact.bairro}</p>
-                    <p>${contact.cidade}</p>
-                    <p>${contact.CEP}</p>
-                </address>
+                <div class="contact">
+                    <li>
+                        <a href="${contact.href}" class="${contact.aClass}" id="${contact.socialNetwork}">
+                            <i class="${contact.iClass}" alt="${contact.alt}"></i>
+                        </a>
+                        <address>
+                            <p>${contact.endereco}</p>
+                            <p>${contact.bairro}</p>
+                            <p>${contact.cidade}</p>
+                            <p>${contact.CEP}</p>
+                        </address>
+                        
+                    </li>
+                </div>
                  `;
     }
 })

@@ -73,7 +73,7 @@ header .container,
 section .container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 section .container {
@@ -113,6 +113,7 @@ section h2 {
 .photo {
     width: 30%;
     margin-left: 52px;
+    border-radius: 50%;
 }
 
 #contact .container {
@@ -160,8 +161,10 @@ form select:focus{
 
 
 .social-links .contact,
-.mensageiros .contact {
+.mensageiros .contact,
+.address .contact {
     display: inline-flex;
+    list-style: none;
 }
 
 
@@ -185,6 +188,21 @@ form select:focus{
     align-items: center;
 }
 
+.address .contact li a {
+    text-decoration: none;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--cor1)
+}
+
+.address .contact li address{
+    width: 400px;
+    margin-top: 8px;
+}
+
 #Instagram  {
     background: linear-gradient(var(--instagram1), var(--instagram2), var(--instagram3) );
     color: var(--cor3); 
@@ -200,9 +218,14 @@ form select:focus{
     color: var(--cor3);
 }
 
+#Maps {
+    background-color: var(--cor1);
+    color: var(--cor3);
+}
+
 .social-links .contact li a :hover,
 .mensageiros .contact li a :hover,
-.maps:hover {
+.address .contact li a :hover {
    color: var(--cor2);
 
 }
