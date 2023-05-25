@@ -159,6 +159,10 @@ form select:focus{
     outline-color: var(--cor2);  
 }
 
+.social-links,
+.mensageiros {
+    padding-left: 0;
+}
 
 .social-links .contact,
 .mensageiros .contact,
